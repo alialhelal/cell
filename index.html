@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بطاقات الخلية التعليمية</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f0fff0; /* Honeydew - لون أخضر فاتح جدًا */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2e8b57; /* SeaGreen - لون أخضر بحري */
+        }
+
+        .flashcard {
+            background-color: #ffffff;
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .inner-card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flashcard.flipped .inner-card {
+            transform: rotateY(180deg);
+        }
+
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            backface-visibility: hidden;
+            border: 2px solid #6b8e23; /* OliveDrab - لون أخضر زيتوني */
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .front {
+            background-color: #f5fffa; /* MintCream - لون كريمي بنكهة النعناع */
+        }
+
+        .back {
+            background-color: #e6f5e6; /* لون أخضر باهت */
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+
+<h1>بطاقات تعليمية: الخلية</h1>
+
+<div class="flashcard" onclick="flipCard(this)">
+    <div class="inner-card">
+        <div class="front">ما هي الخلية؟</div>
+        <div class="back">هي الوحدة الأساسية للحياة ولبنة البناء في جميع الكائنات الحية.</div>
+    </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+    <div class="inner-card">
+        <div class="front">ما هي المكونات الرئيسية للخلية؟</div>
+        <div class="back">النواة، السيتوبلازم، وغشاء الخلية.</div>
+    </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+    <div class="inner-card">
+        <div class="front">ما وظيفة النواة؟</div>
+        <div class="back">تحتوي على المادة الوراثية (DNA) وتتحكم في أنشطة الخلية.</div>
+    </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+    <div class="inner-card">
+        <div class="front">ما الفرق بين الخلية الحيوانية والنباتية؟</div>
+        <div class="back">الخلية النباتية لها جدار خلوي وبلاستيدات خضراء، على عكس الحيوانية.</div>
+    </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+    <div class="inner-card">
+        <div class="front">ما هي وظيفة الميتوكوندريا؟</div>
+        <div class="back">تعتبر "محطة توليد الطاقة" في الخلية، حيث تنتج الطاقة (ATP).</div>
+    </div>
+</div>
+
+<script>
+    function flipCard(card) {
+        card.classList.toggle("flipped");
+    }
+</script>
+
+</body>
+</html>
